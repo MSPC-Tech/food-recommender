@@ -1,0 +1,27 @@
+Work Flow 
+
+1) Identify the places for eating in and around srm. 12-13 jan 
+
+2)focus on java and potheri
+
+3)form creation and questions13-14 jan
+
+4)approval of questions 14-15 jan 
+
+5)collection of datasset
+	->collect names of eateries from java and potheri
+	->atleast 100 per person 18 jan(minimum 60-70 per person)
+	->approch friends fill the form for them
+	->get the name and year of the guy filling the form
+
+6)cleaning of data set(30 jan-6 feb)
+ 
+7)small application of the Recommender system on the dataset collected(30-6feb)
+
+8)research on web deployment of the using flask etc.(30 jan-6 feb)
+
+9)perfecting the recommender system.
+
+10)working in the web animations and making the site more intutive.
+
+
