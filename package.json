@@ -1,0 +1,23 @@
+{
+  "name": "food-recommender",
+  "version": "1.0.0",
+  "description": "food recommender engine made for students of SRM",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Violent-Idiot/Food-Recommender.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Violent-Idiot/Food-Recommender/issues"
+  },
+  "homepage": "https://github.com/Violent-Idiot/Food-Recommender#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.8.11"
+  }
+}
