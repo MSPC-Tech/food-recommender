@@ -1,0 +1,9 @@
+Download both the files to run
+
+Pre Installed Lib: 
+flask 
+flask_restful 
+pandas 
+
+Language
+Python (3.7 or higher)
