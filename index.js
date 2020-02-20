@@ -34,6 +34,14 @@ app.get("/result", (req,res)=>{
     // });
 });
 
+app.get("/explore", (req,res)=>{
+    res.render("explore.html");
+});
+
+app.get("/whats", (req,res)=>{
+    res.render("whats.html");
+});
+
 
 app.get("/aboutus", (req,res)=>{
     res.render("aboutus.html");
