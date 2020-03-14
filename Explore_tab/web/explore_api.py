@@ -99,15 +99,15 @@ class South(Resource):
 
 class Continental(Resource):
     def get(self):
-        south_restro = dict(udf['Continental'].value_counts().sort_values(ascending = False).head(5))
-        a = south_restro.keys()
+        continental_restro = dict(udf['Continental'].value_counts().sort_values(ascending = False).head(5))
+        a = continental_restro.keys()
         k= 1
         for i in a:
-            south_restro[i] = k
+            continental_restro[i] = k
             k += 1
         continental_restro = dict([(value, key) for key, value in continental_restro.items()])
         result = {
-            "Continental" :south_restro
+            "Continental" :continental_restro
         }
         return make_response(jsonify(result),200)
 
