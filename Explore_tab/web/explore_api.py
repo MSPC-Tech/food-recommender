@@ -21,6 +21,11 @@ api = Api(app)
 def hello_world():
     return("Hello World!")
 
+@app.errorhandler(404)
+def page_not_found(e):
+    return "<h1>404</h1><p>The resource could not be found.</p>", 404
+
+
 class All_time(Resource):
     def get(self):
         all_time_restro = dict(udf['All-time'].value_counts().sort_values(ascending = False).head(5))
@@ -117,6 +122,6 @@ api.add_resource(Continental,"/continental")
 
 #for example
 #Run localhost:5000/all-time to get a json result
-
+#added local host to 0.0.0.0
 if __name__ == '__main__':
-    app.run(debug=False)
+    app.run(debug=False,host='0.0.0.0')
