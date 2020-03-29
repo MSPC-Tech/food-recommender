@@ -124,4 +124,4 @@ api.add_resource(Continental,"/continental")
 #Run localhost:5000/all-time to get a json result
 
 if __name__ == '__main__':
-    app.run(debug=False)
+    app.run(debug=False,host='0.0.0.0')
