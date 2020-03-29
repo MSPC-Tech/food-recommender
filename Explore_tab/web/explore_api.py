@@ -1,48 +1,15 @@
 from flask import Flask,jsonify,request,make_response
 from flask_restful import Api,Resource
 import pandas as pd
-
 from pymongo import MongoClient     #To handle mongo db
 
 #Read a tsv file
-df = pd.read_csv("Food Survey_141Responses.tsv",sep = '\t', lineterminator = '\r')
+udf = pd.read_csv("Food Survey_75Responses.tsv",sep = '\t', lineterminator = '\r')
 
 #Manupilating The dataset
 drop_col = ["Timestamp","Food sanctum that doesn't vibes with you"]
-df.drop(drop_col,axis=1,inplace=True)
-df1 = df.iloc[88:,:]
-df1.drop(["Preferred choice"],axis = 1,inplace = True)
-df1.columns = ["What's your name?", 'Year?', 'Select one?','Prefer, North Indian or South Indian?', 'Vegetarian?',
-       'What would you rather prefer?',
-       'Preferred place for Breakfast? (except mess :p)',
-       'Preferred place for Lunch ?(except mess :P)',
-       'Preferred place for Dinner ?(except mess :P)', 'Select One:',
-       'Preferred Chinese Place', 'Preferred Italian Place',
-       'Preferred North Indian Place', 'Preferred South Indian Place',
-       'Preferred Continental Place', 'Tea/Coffee', 'Maggie',
-       'Juices/Milkshakes/Lime', 'Rolls', 'Samosa/Puff', 'Pani Puri/Chat',
-       'Shawarma', 'Sugar Rush', 'Spicy 🌶️', 'Sweet 🍬',
-       'Name the food Sanctum', 'Preferred choice']
-
-df = df.iloc[:88,:]
-df.drop(["Preferred choice.1"],axis = 1,inplace = True)
-df.columns = ["What's your name?", 'Year?', 'Select one?',
-       'Prefer, North Indian or South Indian?', 'Vegetarian?',
-       'What would you rather prefer?',
-       'Preferred place for Breakfast? (except mess :p)',
-       'Preferred place for Lunch ?(except mess :P)',
-       'Preferred place for Dinner ?(except mess :P)', 'Select One:',
-       'Preferred Chinese Place', 'Preferred Italian Place',
-       'Preferred North Indian Place', 'Preferred South Indian Place',
-       'Preferred Continental Place', 'Tea/Coffee', 'Maggie',
-       'Juices/Milkshakes/Lime', 'Rolls', 'Samosa/Puff', 'Pani Puri/Chat',
-       'Shawarma', 'Sugar Rush', 'Preferred choice', 'Spicy 🌶️', 'Sweet 🍬',
-       'Name the food Sanctum']
-
-
-udf = pd.concat([df,df1],ignore_index=True)
-
-cols = ["Name","Year","Hosteller","North-South","Vegetarian","Dine-in","Breakfast","Lunch","Dinner","Cusinies","Chinese","Italain",
+udf.drop(drop_col,axis=1,inplace=True)
+cols = ["Name","Year","Hosteller","North-South","Vegetarin","Dine-in","Breakfast","Lunch","Dinner","Cusinies","Chinese","Italain",
        "North","South","Continental","Tea/Coffee","Maggie","Juices","Rolls","Samosa/Puff","Panipuri","Shawarma","Sugar rush",
        "Spicy-Sweet","Spicy","Sweet","All-time"]
 udf.columns = cols
