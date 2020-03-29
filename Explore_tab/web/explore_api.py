@@ -81,42 +81,27 @@ def page_not_found(e):
 class All_time(Resource):
     def get(self):
         all_time_restro = dict(udf['All-time'].value_counts().sort_values(ascending = False).head(5))
-        a = all_time_restro.keys()
-        k = 1
-        for i in a:
-            all_time_restro[i] = k
-            k += 1
-        all_time_restro = dict([(value, key) for key, value in all_time_restro.items()])
+        a = list(all_time_restro.keys())
         result = {
-            "All-time" : all_time_restro
+            "All-time" : a
         }
         return make_response(jsonify(result),200)
 
 class Chinese(Resource):
     def get(self):
         chinese_restro = dict(udf['Chinese'].value_counts().sort_values(ascending = False).head(5))
-        a = chinese_restro.keys()
-        k= 1
-        for i in a:
-            chinese_restro[i] = k
-            k += 1
-        chinese_restro = dict([(value, key) for key, value in chinese_restro.items()])
+        a = list(chinese_restro.keys())
         result = {
-            "Chinese" :chinese_restro
+            "Chinese" :a
         }
         return make_response(jsonify(result),200)
 
 class Italain(Resource):
     def get(self):
         italain_restro = dict(udf['Italain'].value_counts().sort_values(ascending = False).head(5))
-        a = italain_restro.keys()
-        k= 1
-        for i in a:
-            italain_restro[i] = k
-            k += 1
-        italain_restro = dict([(value, key) for key, value in italain_restro.items()])
+        a = list(italain_restro.keys())
         result = {
-            "Italain" :italain_restro
+            "Italain" :a
         }
         return make_response(jsonify(result),200)
 
@@ -124,42 +109,27 @@ class Italain(Resource):
 class North(Resource):
     def get(self):
         north_restro = dict(udf['North'].value_counts().sort_values(ascending = False).head(5))
-        a = north_restro.keys()
-        k= 1
-        for i in a:
-            north_restro[i] = k
-            k += 1
-        north_restro = dict([(value, key) for key, value in north_restro.items()])
+        a = list(north_restro.keys())
         result = {
-            "North" :north_restro
+            "North" : a
         }
         return make_response(jsonify(result),200)
 
 class South(Resource):
     def get(self):
         south_restro = dict(udf['South'].value_counts().sort_values(ascending = False).head(5))
-        a = south_restro.keys()
-        k= 1
-        for i in a:
-            south_restro[i] = k
-            k += 1
-        south_restro = dict([(value, key) for key, value in south_restro.items()])
+        a = list(south_restro.keys())
         result = {
-            "South" :south_restro
+            "South" : a
         }
         return make_response(jsonify(result),200)
 
 class Continental(Resource):
     def get(self):
         continental_restro = dict(udf['Continental'].value_counts().sort_values(ascending = False).head(5))
-        a = continental_restro.keys()
-        k= 1
-        for i in a:
-            continental_restro[i] = k
-            k += 1
-        continental_restro = dict([(value, key) for key, value in continental_restro.items()])
+        a = list(continental_restro.keys())
         result = {
-            "Continental" :continental_restro
+            "Continental" :a
         }
         return make_response(jsonify(result),200)
 
