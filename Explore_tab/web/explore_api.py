@@ -1,6 +1,7 @@
 from flask import Flask,jsonify,request,make_response
 from flask_restful import Api,Resource
 import pandas as pd
+from pymongo import MongoClient     #To handle mongo db
 
 #Read a tsv file
 udf = pd.read_csv("Food Survey_75Responses.tsv",sep = '\t', lineterminator = '\r')
@@ -16,6 +17,22 @@ udf.columns = cols
 #Create a Flask app(api)
 app = Flask(__name__)
 api = Api(app)
+
+client = MongoClient("mongodb://db:27017")
+db = client.aNewDB
+UserNum = db["UserNum"]
+
+UserNum.insert({
+    'num_of_users' : 0
+})
+
+class Visit(Resource):
+    def get(self):
+        num = UserNum.find({})[0]['num_of_users']
+        num += 1
+        UserNum.update({}, {"$set":{"num_of_users":num}})
+        return str("Hello user " + str(num))
+
 
 @app.route('/')
 def hello_world():
@@ -99,15 +116,15 @@ class South(Resource):
 
 class Continental(Resource):
     def get(self):
-        south_restro = dict(udf['Continental'].value_counts().sort_values(ascending = False).head(5))
-        a = south_restro.keys()
+        continental_restro = dict(udf['Continental'].value_counts().sort_values(ascending = False).head(5))
+        a = continental_restro.keys()
         k= 1
         for i in a:
-            south_restro[i] = k
+            continental_restro[i] = k
             k += 1
         continental_restro = dict([(value, key) for key, value in continental_restro.items()])
         result = {
-            "Continental" :south_restro
+            "Continental" :continental_restro
         }
         return make_response(jsonify(result),200)
 
@@ -119,9 +136,10 @@ api.add_resource(Italain,"/italain")
 api.add_resource(North,"/north")
 api.add_resource(South,"/south")
 api.add_resource(Continental,"/continental")
+api.add_resource(Visit,"/hello")
 
 #for example
 #Run localhost:5000/all-time to get a json result
-
+#added local host to 0.0.0.0
 if __name__ == '__main__':
     app.run(debug=False,host='0.0.0.0')
