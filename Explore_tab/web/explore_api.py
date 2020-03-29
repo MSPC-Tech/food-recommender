@@ -83,7 +83,7 @@ class All_time(Resource):
         all_time_restro = dict(udf['All-time'].value_counts().sort_values(ascending = False).head(5))
         a = list(all_time_restro.keys())
         result = {
-            "All-time" : a
+            "Restaurant" : a
         }
         return make_response(jsonify(result),200)
 
@@ -92,7 +92,7 @@ class Chinese(Resource):
         chinese_restro = dict(udf['Chinese'].value_counts().sort_values(ascending = False).head(5))
         a = list(chinese_restro.keys())
         result = {
-            "Chinese" :a
+            "Restaurant" :a
         }
         return make_response(jsonify(result),200)
 
@@ -101,7 +101,7 @@ class Italain(Resource):
         italain_restro = dict(udf['Italain'].value_counts().sort_values(ascending = False).head(5))
         a = list(italain_restro.keys())
         result = {
-            "Italain" :a
+            "Restaurant" :a
         }
         return make_response(jsonify(result),200)
 
@@ -111,7 +111,7 @@ class North(Resource):
         north_restro = dict(udf['North'].value_counts().sort_values(ascending = False).head(5))
         a = list(north_restro.keys())
         result = {
-            "North" : a
+            "Restaurant" : a
         }
         return make_response(jsonify(result),200)
 
@@ -120,7 +120,7 @@ class South(Resource):
         south_restro = dict(udf['South'].value_counts().sort_values(ascending = False).head(5))
         a = list(south_restro.keys())
         result = {
-            "South" : a
+            "Restaurant" : a
         }
         return make_response(jsonify(result),200)
 
@@ -129,7 +129,7 @@ class Continental(Resource):
         continental_restro = dict(udf['Continental'].value_counts().sort_values(ascending = False).head(5))
         a = list(continental_restro.keys())
         result = {
-            "Continental" :a
+            "Restaurant" :a
         }
         return make_response(jsonify(result),200)
 
