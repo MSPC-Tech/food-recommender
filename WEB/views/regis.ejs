@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SRMeats</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="css\index.css">
+</head>
+<body class="bg_img">
+
+  <!-- NAVBAR STARTS HERE -->
+
+  <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="/" style="color: white;"><strong style="font-weight: 8000; font-size: 5vh;">SRM</strong>eats</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a type="button" class="btn nav-item nav-link nav_button" href="explore"><img src="IMG\PNG\binocular.png" class="img_place">  Explore</a>
+            <a type="button" class="btn nav_button nav-item nav-link" href="whats"><img src="IMG\PNG\popular.png" class="img_place"> What's New</a>
+            <a type="button" class="btn nav_button nav-item nav-link" href="aboutus"><img src="IMG\PNG\question.png" class="img_place"> About Us</a>
+          </div>
+        </div>
+      </nav>
+
+  <!-- NAVBAR ENDS HERE -->
+  <span>
+    <h1 class="explore_title"><a type="button" onclick="goBack()"><img src="SVG\back-button.svg" style="margin-bottom: 35%; padding-right: 10px;"><a>Register</h1>
+  </span>
+
+    <div class="container">
+      <div class="regis">
+        <form action="index" method="POST">
+            <div class="form-group">
+                <label>User Name</label>
+                <input type="text" class="form-control" id="name" for placeholder="Enter your Name">
+            </div>
+            <div class="form-group">
+                <div class="custom-control custom-radio custom-control-inline">
+                  <input type="radio"  id="customRadioInline1" name="year" value="1st year" class="custom-control-input">
+                  <label class="custom-control-label" for="customRadioInline1">1st Year</label>
+                </div>
+                <div class="custom-control custom-radio custom-control-inline">
+                  <input type="radio" id="customRadioInline2" name="year" value="2nd year" class="custom-control-input">
+                  <label class="custom-control-label" for="customRadioInline2">2nd Year</label>
+                </div>
+                <div class="custom-control custom-radio custom-control-inline">
+                    <input type="radio" id="customRadioInline3" name="year" value="3rd year" class="custom-control-input">
+                    <label class="custom-control-label" for="customRadioInline3">3rd Year</label>
+                </div>
+                <div class="custom-control custom-radio custom-control-inline">
+                    <input type="radio" id="customRadioInline4" name="year" value="4th year" class="custom-control-input">
+                    <label class="custom-control-label" for="customRadioInline4">4th Year</label>
+                </div>
+            </div>
+            <h5>Vegetarian</h5>
+            <input type="submit" class="btn btn-primary" value="submit">
+            <!-- <div class="form-group">
+              <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio"  id="customRadioInline1" name="veg" value="yes" class="custom-control-input">
+                <label class="custom-control-label" for="customRadioInline1">yes</label>
+              </div>
+              <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" id="customRadioInline2" name="veg" value="no" class="custom-control-input">
+                <label class="custom-control-label" for="customRadioInline2">no</label>
+              </div>
+            </div> -->
+      </form>
+      </div>
+    </div>
+
+<footer class="page-footer">
+  <div class="d-flex justify-content-center" style="padding-top: 7px;">
+    <p>Copyrights 2020 | Contact Us | Made by the students of SRMIST | Privacy Policy</p>
+  </div>
+</footer>
+
+    <!-- SCRIPT STARTS HERE --> 
+    <script>
+      function goBack() {
+        window.history.back();
+      }
+    </script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>
