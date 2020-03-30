@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>SRMeats</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="css\index.css">
+    <link rel="stylesheet" href="CSS\index.css">
 </head>
 <body class="bg_img">
 
@@ -33,30 +33,51 @@
 
     <div class="container">
       <div class="regis">
-        <form action="index" method="POST">
+        <form action="/regis" method="POST">
             <div class="form-group">
                 <label>User Name</label>
-                <input type="text" class="form-control" id="name" for placeholder="Enter your Name">
+                <input type="text" class="form-control" id="name" name="name" placeholder="Enter your Name">
             </div>
             <div class="form-group">
                 <div class="custom-control custom-radio custom-control-inline">
-                  <input type="radio"  id="customRadioInline1" name="year" value="1st year" class="custom-control-input">
+                  <input type="radio"  id="customRadioInline1" name="year" value="1" class="custom-control-input">
                   <label class="custom-control-label" for="customRadioInline1">1st Year</label>
                 </div>
                 <div class="custom-control custom-radio custom-control-inline">
-                  <input type="radio" id="customRadioInline2" name="year" value="2nd year" class="custom-control-input">
+                  <input type="radio" id="customRadioInline2" name="year" value="2" class="custom-control-input">
                   <label class="custom-control-label" for="customRadioInline2">2nd Year</label>
                 </div>
                 <div class="custom-control custom-radio custom-control-inline">
-                    <input type="radio" id="customRadioInline3" name="year" value="3rd year" class="custom-control-input">
+                    <input type="radio" id="customRadioInline3" name="year" value="3" class="custom-control-input">
                     <label class="custom-control-label" for="customRadioInline3">3rd Year</label>
                 </div>
                 <div class="custom-control custom-radio custom-control-inline">
-                    <input type="radio" id="customRadioInline4" name="year" value="4th year" class="custom-control-input">
+                    <input type="radio" id="customRadioInline4" name="year" value="4" class="custom-control-input">
                     <label class="custom-control-label" for="customRadioInline4">4th Year</label>
                 </div>
             </div>
             <h5>Vegetarian</h5>
+            <div class="form-group">
+              <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio"  id="customRadioInline6" name="veg" value="yes" class="custom-control-input">
+                <label class="custom-control-label" for="customRadioInline6">yes</label>
+              </div>
+              <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" id="customRadioInline7" name="veg" value="no" class="custom-control-input">
+                <label class="custom-control-label" for="customRadioInline7">NO </label>
+              </div>
+            </div>
+            <h5>Flavor Preference</h5>
+            <div class="form-group">
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="fav" id="inlineRadio1" value="spicy">
+                <label class="form-check-label" for="inlineRadio1">Spicy</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="fav" id="inlineRadio2" value="sweet">
+                <label class="form-check-label" for="inlineRadio2">Sweet</label>
+              </div>
+            </div>
             <input type="submit" class="btn btn-primary" value="submit">
             <!-- <div class="form-group">
               <div class="custom-control custom-radio custom-control-inline">
@@ -68,7 +89,7 @@
                 <label class="custom-control-label" for="customRadioInline2">no</label>
               </div>
             </div> -->
-      </form>
+       </form>
       </div>
     </div>
 

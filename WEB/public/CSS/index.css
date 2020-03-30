@@ -186,6 +186,11 @@ nav {
   border: 0px;
 }
 
+.sub_nav_button:active{
+  color: white;
+  background-color: black;
+}
+
 hr{
   border-top: 2px solid black;
 }
