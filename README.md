@@ -21,7 +21,8 @@ Next time you want to look for a a new place or a good suggestion, you know wher
 
 > Made By Tech Team of Microsoft Learn Student Ambassadors SRM with ❤️
 
-<br>
+<br><br>
+
 [![ForTheBadge built-with-love](http://ForTheBadge.com/images/badges/built-with-love.svg)](https://msclubsrm.in/)
 [![ForTheBadge built-by-developers](http://ForTheBadge.com/images/badges/built-by-developers.svg)](https://github.com/MLSA-SRM/SRM-Eats/graphs/contributors)
 
